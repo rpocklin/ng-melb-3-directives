@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1>Confirmable Directive</h1>
+
+  <div class="form-group">
+  <span ng-if="!reset">
+
+    <confirmable reset-delay="1500" when-confirmed="confirmed" text-before="(" text-after=")" unconfirmed-text="You don't wanna do this ..."
+                    confirming-text="You *REALLY* don't wanna do this!" confirmed-text="Closing your bank account ...">
+
+      <button class="btn btn-default">
+        <confirmable-outlet></confirmable-outlet>
+      </button>
+
+    </confirmable>
+
+    <button ng-if="done" class="btn btn-success">Closed!</button>
+  </span>
+    <button class="btn btn-info" ng-click="resetState()">Reset</button>
+  </div>
+
+</div>
